@@ -17,7 +17,7 @@ const main = async () => {
     await (0, db_1.default)();
     const app = (0, express_1.default)();
     app.use((0, cookie_parser_1.default)());
-    app.use((0, cors_1.default)({ origin: ["https://front-end-dynamic-website-dusky.vercel.app", "*"] }));
+    app.use((0, cors_1.default)({ credentials: true, origin: ["https://front-end-dynamic-website-dusky.vercel.app", "*"] }));
     app.use(body_parser_1.default.json());
     app.use(body_parser_1.default.urlencoded());
     app.use(body_parser_1.default.urlencoded({ extended: true }));
