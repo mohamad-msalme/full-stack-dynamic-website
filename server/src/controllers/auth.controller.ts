@@ -86,7 +86,8 @@ export const login = async (req: Request, res: Response) => {
         res.cookie('token', token, {
             httpOnly: true,
             secure: true,
-            sameSite: "lax"
+            sameSite: "lax",
+            domain: "https://front-end-dynamic-website-dusky.vercel.app"
         });
 
         return res.status(200).send({
