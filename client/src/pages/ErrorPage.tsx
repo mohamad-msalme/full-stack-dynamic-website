@@ -5,7 +5,7 @@ const ErrorPage = () => {
   console.log({ErrorPage: "first"})
   const error = useRouteError();
   const message = "Something went wrong";
-  if (isAxiosError<{ errors: { message: string }[] }>(error) && error.response?.status === 401) {
+  if (isAxiosError<{ errors: { message: string }[] }>(error)) {
     return <Navigate to={"/sigin"} />;
   }
 
