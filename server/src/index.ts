@@ -15,7 +15,7 @@ const main =  async () => {
 
     const app = express()
     app.use(cookieParser());
-    app.use(cors({ credentials: true, origin: "*" }));
+    app.use(cors({ credentials: true, origin: [process.env.FRONT_URL, "*"] }));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded());
     app.use(bodyParser.urlencoded({ extended: true }));
