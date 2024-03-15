@@ -17,7 +17,7 @@ const main = async () => {
     await (0, db_1.default)();
     const app = (0, express_1.default)();
     app.use((0, cookie_parser_1.default)());
-    app.use((0, cors_1.default)({ origin: "*" }));
+    app.use((0, cors_1.default)({ origin: "https://fr-dynamic-website.vercel.app" }));
     app.use(body_parser_1.default.json());
     app.use(body_parser_1.default.urlencoded());
     app.use(body_parser_1.default.urlencoded({ extended: true }));
@@ -28,9 +28,6 @@ const main = async () => {
     app.use("/website", website_routes_1.default);
     app.get("/", (_req, res) => {
         res.send("404 Page not found Test");
-    });
-    app.get("/test", (_req, res) => {
-        res.send("is working right now ");
     });
     app.listen(process.env.PORT ? parseInt(process.env.PORT) : 3002, () => {
         console.log(`Listen on port ${process.env.PORT ? parseInt(process.env.PORT) : 3002}`);

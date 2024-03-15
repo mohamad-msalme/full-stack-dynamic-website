@@ -20,7 +20,7 @@ export const authenticateUser = (req: Request, res: Response, next: NextFunction
         return next();
     } catch (error) {
         console.error('Error authenticating user:', error);
-        res.status(401).send({error: {
+        res.status(401).json({error: {
                 message: "Unauthorized"
         }});
     }

@@ -31,7 +31,7 @@ async function generateWebsite(websiteName, websiteDescription, targetAudience) 
       Ensure that the generated website template is responsive and adaptable to various screen sizes and devices to optimize the user experience. Utilize the provided user data, including the ${websiteName}, ${websiteDescription}, and ${targetAudience}, to personalize the content and design of the website accordingly.
         `;
     const response = await openAi_1.openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: process.env.OPEN_AI_MODEL,
         messages: [{
                 role: "user",
                 content: prompt

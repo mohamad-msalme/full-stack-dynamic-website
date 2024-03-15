@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://full-stack-dynamic-website-one.vercel.app", // Target server (your API server)
+        target: "http://localhost:3002", // Target server (your API server)
         secure: false,
         changeOrigin: true, // Change the origin of the host header to the target URL
         rewrite: (path) => path.replace(/^\/api/, ""),

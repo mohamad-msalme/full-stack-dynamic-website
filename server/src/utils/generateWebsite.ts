@@ -32,7 +32,7 @@ export async function generateWebsite(websiteName: string, websiteDescription: s
     
         // Request content generation from OpenAI
         const response = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo", // You can use the model of your choice
+            model: process.env.OPEN_AI_MODEL, // You can use the model of your choice
             messages: [{
                 role: "user",
                 content: prompt
