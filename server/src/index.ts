@@ -27,6 +27,9 @@ const main =  async () => {
     app.get("/", (_req, res) => {
         res.send("404 Page not found Test");
     });
+    app.get("/test", (_req, res) => {
+        res.send("is working right now ")
+    })
     app.listen(process.env.PORT ? parseInt(process.env.PORT) : 3002, () => {
         console.log(
           `Listen on port ${process.env.PORT ? parseInt(process.env.PORT) : 3002}`
