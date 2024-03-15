@@ -75,9 +75,8 @@ const login = async (req, res) => {
         const token = jsonwebtoken_1.default.sign({ userId: user._id }, process.env.JWT_SECRET);
         res.cookie('token', token, {
             httpOnly: true,
-            secure: true,
+            secure: process.env.NODE_ENV === "production",
             sameSite: "lax",
-            domain: "https://front-end-dynamic-website-dusky.vercel.app"
         });
         return res.status(200).send({
             success: {
