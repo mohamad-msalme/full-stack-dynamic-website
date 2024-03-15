@@ -86,7 +86,7 @@ export const login = async (req: Request, res: Response) => {
         res.cookie('token', token, {
             httpOnly: true,
             secure: false,
-            sameSite: "lax"
+            sameSite: "strict"
         });
 
         return res.status(200).send({
