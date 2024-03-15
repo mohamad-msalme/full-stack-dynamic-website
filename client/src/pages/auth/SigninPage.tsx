@@ -16,7 +16,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@src/components/ui/form";
-
 const schema = z.object({
   email: z.string().email().min(1, {
     message: "Email is Required",

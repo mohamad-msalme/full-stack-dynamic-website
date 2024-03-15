@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@src/lib/utils";
+import ImageUrl from "../../assets/log-in.webp"
 
 export const AuthLeftSide: React.FC = () => {
   const img3D = React.useRef<HTMLImageElement>(null);
@@ -85,7 +86,7 @@ export const AuthLeftSide: React.FC = () => {
       <img
         ref={img3D}
         className={cn("max-w-full")}
-        src="src/assets/log-in.webp"
+        src={ImageUrl}
         alt="Login"
       />
     </div>
