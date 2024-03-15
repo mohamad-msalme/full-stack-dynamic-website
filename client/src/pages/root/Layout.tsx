@@ -1,4 +1,3 @@
-import React from "react";
 import { loader } from "./loader";
 import { useData } from "./useData";
 import { LogoutBtn } from "@src/components/LogoutBtn";
