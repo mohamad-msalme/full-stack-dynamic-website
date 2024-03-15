@@ -12,10 +12,10 @@ import cookieParser from "cookie-parser";
 const main =  async () => {
     await connectDB()
     
-    
+
     const app = express()
     app.use(cookieParser());
-    app.use(cors({ credentials: true, origin: ["https://front-end-dynamic-website-dusky.vercel.app", "*"] }));
+    app.use(cors({ credentials: true, origin: ["https://front-end-dynamic-website-dusky.vercel.app", "https://back-end-dynamic-website.vercel.app", "*"] }));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded());
     app.use(bodyParser.urlencoded({ extended: true }));
