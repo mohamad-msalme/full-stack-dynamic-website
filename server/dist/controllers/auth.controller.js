@@ -75,8 +75,8 @@ const login = async (req, res) => {
         const token = jsonwebtoken_1.default.sign({ userId: user._id }, process.env.JWT_SECRET);
         res.cookie('token', token, {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict"
+            secure: true,
+            sameSite: "lax"
         });
         return res.status(200).send({
             success: {
