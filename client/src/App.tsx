@@ -4,6 +4,7 @@ import { Toaster } from "./components/ui/sonner";
 import { ReactRouterProvider } from "@providers/ReactRouterProvider";
 import { ReactQueryProvider } from "@providers/ReactQueryProvider";
 export const App: React.FC = () => {
+  console.log({App: "first"})
   return (
     <ReactQueryProvider>
       <ReactRouterProvider />

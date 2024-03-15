@@ -2,10 +2,11 @@ import { isAxiosError } from "axios";
 import { Navigate, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
+  console.log({ErrorPage: "first"})
   const error = useRouteError();
   const message = "Something went wrong";
-  if (isAxiosError<{ errors: { message: string }[] }>(error)) {
-      return <Navigate to={"/sigin"} />;
+  if (isAxiosError<{ errors: { message: string }[] }>(error) && error.response?.status === 401) {
+    return <Navigate to={"/sigin"} />;
   }
 
   return (
