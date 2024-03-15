@@ -15,7 +15,7 @@ const main =  async () => {
     
     const app = express()
     app.use(cookieParser());
-    app.use(cors({ origin: "https://full-stack-dynamic-website-oysg.vercel.app" }));
+    app.use(cors({ credentials: true, origin: ["https://full-stack-dynamic-website-oysg.vercel.app"] }));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded());
     app.use(bodyParser.urlencoded({ extended: true }));
